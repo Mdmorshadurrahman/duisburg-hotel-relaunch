@@ -5,33 +5,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="https://i.ibb.co/xjJ9nKP/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <!-- tailwind CSS framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- icon link -->
+    <script src="https://kit.fontawesome.com/b6d9270fd8.js" crossorigin="anonymous"></script>
     <title>Duisburg Hotel</title>
 </head>
 
 <body>
-    <h1>Hi</h1>
     <!-- Header section starts here -->
     <section>
-        <Header>
-            <button type="button" class="btn btn-primary">Primary</button>
+        <Header id="header">
+            <div class="flex flex-col h-3/6 justify-center items-center gap-5 h-full">
+                <h1 class="text-white max-sm:text-3xl sm:text-5xl font-semibold"><i
+                        class="fa-solid fa-hotel text-blue-500 border-2 border-white bg-black rounded-lg p-2"></i> HOTEL
+                    DUISBURG</h1>
+                <p class="max-sm:text-base sm:text-xl font-light text-gray-200">Where You can find your comfort and
+                    relaxation</p>
+                <a href="#contact-container"><button
+                        class="text-center border-2 hover:text-blue-500 hover:bg-black rounded-lg w-fit mx-auto p-5 mb-10 text-xl text-white bg-blue-500 border-white">Contact
+                        Us</button></a>
+
+            </div>
         </Header>
     </section>
     <!-- Header section ends here -->
     <!-- Service section starts here -->
     <section>
-
+        <div class="w-5/6 mx-auto my-48">
+            <h1
+                class="text-center text-white border-2 border-white text-xl bg-blue-500 rounded-lg w-fit mx-auto p-5 mb-10">
+                Services</h1>
+            <div class="carousel rounded-lg border-2 border-black carousel-container relative">
+                <!-- Room Service 24/7 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/qpcY5ZN/hotel-room-with-white-sheets.jpg" class="w-full" />
+                    <div
+                        class="absolute max-lg:flex-col lg:flex-row flex justify-center items-center gap-5 bottom-2/4 mx-auto w-full bg-transparent">
+                        <i
+                            class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid fa-bell-concierge  max-sm:text-base max-lg:text-3xl lg:text-5xl hover:bg-blue-500  cursor-pointer"></i>
+                        <input
+                            class="font-light max-sm:text-base max-lg:text-3xl lg:text-5xl bg-black rounded-lg border-2 border-white "
+                            type="text" placeholder="Room Service 24/7">
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-black hover:bg-blue-500 ">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black hover:bg-blue-500 ">❯</a>
+                    </div>
+                </div>
+                <!-- Massage & Spa -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/61sXT5Q/close-up-woman-getting-massage.jpg" class="w-full" />
+                    <div
+                        class="absolute flex justify-center items-center gap-5 bottom-2/4 mx-auto w-full bg-transparent">
+                        <i
+                            class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid fa-spa max-sm:text-base max-lg:text-3xl lg:text-5xl hover:bg-blue-500  cursor-pointer"></i>
+                        <input
+                            class="font-light max-sm:text-base max-lg:text-3xl lg:text-5xl bg-black rounded-lg border-2 border-white"
+                            type="text" placeholder="Massage & Spa">
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-black hover:bg-blue-500 ">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black hover:bg-blue-500 ">❯</a>
+                    </div>
+                </div>
+                <!-- Laundry Service -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/vHmgMKF/white-towels-drying-clotheshorse.jpg" class="w-full" />
+                    <div
+                        class="absolute flex justify-center items-center gap-5 bottom-2/4 mx-auto w-full bg-transparent">
+                        <i
+                            class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid fa-shirt max-sm:text-base max-lg:text-3xl lg:text-5xl hover:bg-blue-500  cursor-pointer"></i>
+                        <input
+                            class="font-light max-sm:text-base max-lg:text-3xl lg:text-5xl bg-black rounded-lg border-2 border-white"
+                            type="text" placeholder="Laundry Service">
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-black hover:bg-blue-500 ">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-black hover:bg-blue-500 ">❯</a>
+                    </div>
+                </div>
+                <!-- Currency Exchange -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/3SvTQBB/map-world-with-money-magnifying-glass.jpg" class="w-full" />
+                    <div
+                        class="absolute flex justify-center items-center gap-5 bottom-2/4 mx-auto w-full bg-transparent">
+                        <i
+                            class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid fa-coins max-sm:text-base max-lg:text-3xl lg:text-5xl hover:bg-blue-500  cursor-pointer"></i>
+                        <input
+                            class="font-light max-sm:text-base max-lg:text-3xl lg:text-5xl bg-black rounded-lg border-2 border-white"
+                            type="text" placeholder="Currency Exchange">
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-black hover:bg-blue-500 ">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black hover:bg-blue-500 ">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Service section ends here -->
     <!-- Contact section starts here -->
-    <section>
-
+    <section class="mt-20 bg-black py-10" id="contact-container">
+        <div>
+            <h1
+                class="text-center text-white border-2 border-white text-xl bg-blue-500 rounded-lg w-fit mx-auto p-5 mb-10">
+                Contact Us</h1>
+            <h2 class="text-center text-white text-xl">We are always ready to answer your queries</h2>
+            <div class="w-3/6 mx-auto mt-20">
+                <div class="flex flex-wrap gap-x-10 text-white items-center my-10">
+                    <h2>You can contact us via: </h2>
+                    <i
+                        class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid text-5xl hover:bg-blue-500 cursor-pointer fa-envelope "></i>
+                    <h1>OR</h1>
+                    <i
+                        class="bg-black text-white rounded-full p-2 border-2 border-white fa-solid text-5xl hover:bg-blue-500 cursor-pointer fa-phone"></i>
+                    <h1>OR</h1>
+                </div>
+                <h3 class="text-white">Filling this contact form:</h3>
+                <!-- contact form starts here -->
+                <div class="mt-5 ">
+                    <form>
+                        <div class="form-control w-full max-w-xs ">
+                            <label class="label">
+                                <span class="label-text text-white">What is your First name?</span>
+                            </label>
+                            <input type="text" placeholder="First Name" class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">What is your Last name?</span>
+                            </label>
+                            <input type="text" placeholder="Last Name" class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">What is Email Address?</span>
+                            </label>
+                            <input type="email" placeholder="Email Address"
+                                class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">What is your Phone Number?</span>
+                            </label>
+                            <input type="tel" placeholder="Phone Number" class="input input-bordered w-full max-w-xs"
+                                required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text text-white">Your Query</span>
+                            </label>
+                            <textarea class="textarea textarea-bordered h-24" placeholder="Message" required></textarea>
+                        </div>
+                        <button
+                            class="text-center border-2 hover:text-blue-500 hover:bg-black rounded-lg w-fit mx-auto p-3 mt-5 mb-10 text-xl text-white bg-blue-600 border-white">Submit</button>
+                    </form>
+                </div>
+                <!-- contact form ends here -->
+            </div>
+        </div>
     </section>
     <!-- Contact section ends here -->
 </body>
